@@ -1,4 +1,9 @@
 const choices = ["rock","paper","scissors"]
+const rockButton = document.querySelector('.rock')
+const paperButton = document.querySelector('.paper')
+const scissorsButton = document.querySelector('.scissors')
+const outcomeDiv = document.querySelector('.outcome')
+
 
 function game() {
     //play the game
@@ -50,4 +55,22 @@ function Gwinner(cP, cC){
         return "Computer";
       }
 }
+
+rockButton.addEventListener('click', () => {
+    const computerSelection = computerChoice()
+    const playerSelection = 'rock'
+    playRound(playerSelection, computerSelection)
+})
+
+paperButton.addEventListener('click', () => {
+    const computerSelection = computerChoice()
+    const playerSelection = 'paper'
+    playRound(playerSelection, computerSelection)
+})
+
+scissorsButton.addEventListener('click', () => {
+    const computerSelection = computerChoice()
+    const playerSelection = 'scissors'
+    playRound(playerSelection, computerSelection)
+})
 game();
